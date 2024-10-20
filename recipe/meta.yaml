@@ -33,7 +33,6 @@ requirements:
     - scipy >=1.4
   run:
     - python
-    - numpy >=1.23
     - scikit-learn >=1.0
     - scipy >=1.4
 
