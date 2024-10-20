@@ -24,18 +24,18 @@ requirements:
     - {{ stdlib('c') }}
   host:
     - python
+    - pip
     - setuptools
     - wheel
     - cython >=3.0a4
     - numpy >=1.23
-    - scipy >=1.4
     - scikit-learn >=1.0
-    - pip
+    - scipy >=1.4
   run:
     - python
-    - scipy >=1.4
+    - numpy >=1.23
     - scikit-learn >=1.0
-    - {{ pin_compatible('numpy') }}
+    - scipy >=1.4
 
 test:
   imports:
