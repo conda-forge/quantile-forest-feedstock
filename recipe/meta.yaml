@@ -48,7 +48,7 @@ test:
 
 about:
   home: https://zillow.github.io/quantile-forest
-  summary: scikit-learn compatible quantile forests.
+  summary: Quantile regression forests compatible with scikit-learn.
   dev_url: https://github.com/zillow/quantile-forest
   license: Apache-2.0
   license_file: LICENSE
