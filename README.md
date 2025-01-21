@@ -7,7 +7,7 @@ Home: https://zillow.github.io/quantile-forest
 
 Package license: Apache-2.0
 
-Summary: Quantile regression forests compatible with scikit-learn.
+Summary: scikit-learn compatible quantile forests.
 
 Development: https://github.com/zillow/quantile-forest
 
