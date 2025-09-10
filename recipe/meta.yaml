@@ -22,7 +22,6 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
-    - huggingface_hub
   host:
     - python
     - pip
@@ -40,7 +39,6 @@ requirements:
 
 test:
   imports:
-    - examples
     - quantile_forest
   commands:
     - pip check
