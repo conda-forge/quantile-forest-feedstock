@@ -10,7 +10,10 @@ source:
   sha256: 35fcc2ad7becc79b313d48fe7df90b7d3668dd6d7aeb5d2de0a2d2ae8ce100d8
 
 build:
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script:
+    - rm -f quantile_forest/*.cpp  # [unix]
+    - del /q quantile_forest\*.cpp  # [win]
+    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
