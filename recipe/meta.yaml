@@ -1,5 +1,5 @@
 {% set name = "quantile-forest" %}
-{% set version = "1.4.2" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,15 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/quantile_forest-{{ version }}.tar.gz
-  sha256: 35fcc2ad7becc79b313d48fe7df90b7d3668dd6d7aeb5d2de0a2d2ae8ce100d8
+  sha256: aa1ad80815490a740e7dd36a648e741d87d07492cf0643189302d9d260824ebb
 
 build:
   script:
     - rm -f quantile_forest/*.cpp  # [unix]
     - del /q quantile_forest\*.cpp  # [win]
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
+  skip: true  # [py<311]
 
 requirements:
   build:
@@ -32,13 +33,11 @@ requirements:
     - wheel
     - cython >=3.0a4
     - numpy >=2.0
-    - scikit-learn >=1.5
-    - scipy >=1.4
   run:
     - python
     - numpy >=1.23
-    - scikit-learn >=1.5
-    - scipy >=1.4
+    - scikit-learn >=1.9
+    - scipy >=1.6
 
 test:
   imports:
